@@ -1,3 +1,11 @@
+# Material UI - 1.0 - Theme Example Project for React Create App
+
+
+https://github.com/callemall/material-ui/tree/v1-beta/examples/create-react-app
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
