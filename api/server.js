@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-let widgets = []
+let widgets = [{ name: 'foo' }]
 
 const app = express()
 
@@ -13,7 +13,6 @@ app.get('/widgets', (req, res) => {
 })
 
 app.post('/widgets', bodyParser.json(), (req, res) => {
-  console.log(req.body)
   widgets = [...widgets, req.body]
   res.send({ ok: true })
 })

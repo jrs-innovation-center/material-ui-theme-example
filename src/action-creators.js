@@ -1,4 +1,6 @@
 import fetch from 'isomorphic-fetch'
+import history from './history'
+
 import { SET_WIDGETS, ERROR } from './constants'
 
 const url = process.env.REACT_APP_API
@@ -27,6 +29,7 @@ export const setWidgets = async dispatch => {
   try {
     const widgets = await fetch(url + '/widgets').then(res => res.json())
     dispatch({ type: SET_WIDGETS, payload: widgets })
+    history.push('/')
   } catch (err) {
     dispatch({ type: ERROR, payload: 'Could not find widgets' })
   }

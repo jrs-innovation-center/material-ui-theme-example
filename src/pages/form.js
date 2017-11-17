@@ -18,9 +18,11 @@ import {
   Select,
   Typography,
   Toolbar,
-  Button
+  Button,
+  IconButton,
+  Icon
 } from 'material-ui'
-
+import { Link } from 'react-router-dom'
 const WidgetForm = props => {
   return (
     <form
@@ -31,6 +33,13 @@ const WidgetForm = props => {
     >
       <AppBar position="static">
         <Toolbar className="flex">
+          <Link to="/" style={{ textDecoration: 'none', color: 'transparent' }}>
+            <IconButton color="inherit">
+              <Icon color="accent" style={{ fontSize: 36 }}>
+                keyboard_arrow_left
+              </Icon>
+            </IconButton>
+          </Link>
           <Typography className="flex-auto" type="title" color="inherit">
             Widget Form
           </Typography>
